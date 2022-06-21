@@ -18,7 +18,7 @@ DB_HOST=127.0.0.1
 DB_PORT=3306
 
 # Indicar el nombre de la BD
-DB_DATABASE=test_telco_cursos
+DB_DATABASE=database
 
 # Indicar el nombre del usuario de la BD
 DB_USERNAME=root
