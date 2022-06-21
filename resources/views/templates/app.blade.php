@@ -136,39 +136,6 @@
     {{-- <script src="{{ asset('js/moment.js') }}"></script> --}}
     <script src="{{ asset('js/toastr.min.js') }}"></script>
     <script>
-        $.modalVid = function(selector = 'id') {
-
-            // Reset modal when it hides
-            $(selector).on('hidden.bs.modal', function() {
-                $(this).find('.modal-body').html('Loading...');
-                $(this).find('.modal-footer').html(
-                    '<button type="button" data-dismiss="modal" class="btn dark btn-outline">Cancel</button>'
-                    );
-                $(this).data('bs.modal', null);
-            });
-
-            $('#modal-body').html(`
-        <div class="modal-body">
-                              <div class="card-header" id="headingSecretaria">
-                                <h2 class="mb-0">
-                                    <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" 
-                                        data-target="#collapseSecretaria" aria-expanded="true" aria-controls="collapseSecretaria">
-                                        Sistemas
-                                    </button>
-                                </h2>
-                            </div>
-                            <div id="collapseSecretaria" class="collapse show" aria-labelledby="headingSecretaria" data-parent="#videotutorialesAccordion">
-                                <div class="card-body">
-                                    <ul>
-                                        <li>Sistemas Autoadmin-Insumos Reasignación: <a href="https://drive.google.com/file/d/1JLIb6nvrAATaPCOlV3bzWxg5ryeo7XrR/view?usp=sharing" target="_blank">https://drive.google.com/file/d/1JLIb6nvrAATaPCOlV3bzWxg5ryeo7XrR/view?usp=sharing</a></li>
-                                        <li>Sistemas-HPD Integración LIRANKA Ajustes 2: <a href="https://drive.google.com/file/d/1Z7pEShe66VCue13IILeiR7TGlE2JsX3p/view?usp=sharing" target=\"_blank\">https://drive.google.com/file/d/1Z7pEShe66VCue13IILeiR7TGlE2JsX3p/view?usp=sharing</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-        `);
-            $('#modal-component').modal('show');
-        };
-
         $(document).ready(function() {
             $('.select2').select2();
             $.toast = toastr;
